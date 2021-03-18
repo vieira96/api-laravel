@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 
 class StateController extends Controller
 {
+     //criei o metodo com o $id = false para usar o mesmo metodo para todos os estados e para um unico estado
+    //caso seja informado um id
     public function states($id = false)
     {
         if($id) {
@@ -24,6 +26,7 @@ class StateController extends Controller
         }
     }
 
+    //pego a quantidade de usuarios cadastrados por cada estado
     public function countUsersPerState() {
         $states = State::all();
         foreach($states as $state) {

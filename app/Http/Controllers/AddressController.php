@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class AddressController extends Controller
 {
+     //criei o metodo com o $id = false para usar o mesmo metodo para todos os endereços e para um unico endereço
+    //caso seja informado um id
     public function adresses($id = false)
     {
         if($id) {

@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\User;
 
-use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
+    //criei o metodo com o $id = false para usar o mesmo metodo para todas as cidades e para uma unica cidade
+    //caso seja informado um id
     public function cities($id = false)
     {
         if($id) {
@@ -24,6 +25,7 @@ class CityController extends Controller
         }
     }
 
+    //pego a quantidade de usuarios cadastrados por cada cidade
     public function countUsersPerCity() {
         $cities = City::all();
         foreach($cities as $city) {

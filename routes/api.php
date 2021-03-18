@@ -22,6 +22,7 @@ Route::get('/user/{id}', [UserController::class, 'read']);
 Route::put('/update/{id}', [UserController::class, 'update']);
 Route::delete('/delete/{id}', [UserController::class, 'delete']);
 
+//adicioneei o {id?} para ser um parametro opcional. 
 Route::get('/adresses/{id?}', [AddressController::class, 'adresses']);
 Route::get('/states/{id?}', [AddressController::class, 'states']);
 Route::get('/cities/{id?}', [AddressController::class, 'cities']);

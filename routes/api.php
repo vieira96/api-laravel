@@ -27,5 +27,5 @@ Route::get('/adresses/{id?}', [AddressController::class, 'adresses']);
 Route::get('/states/{id?}', [AddressController::class, 'states']);
 Route::get('/cities/{id?}', [AddressController::class, 'cities']);
 
-Route::get('/user-per-city', [CityController::class, 'countUsersPerCity']);
-Route::get('/user-per-state', [StateController::class, 'countUsersPerState']);
+Route::get('/users-per-city', [CityController::class, 'countUsersPerCity']);
+Route::get('/users-per-state', [StateController::class, 'countUsersPerState']);

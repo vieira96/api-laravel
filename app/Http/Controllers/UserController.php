@@ -117,6 +117,9 @@ class UserController extends Controller
     {
         $user =  User::find($id);
         if($user){
+            $user->address = Address::find($user->address_id);
+            $user->state = State::find($user->state_id);
+            $user->city = City::find($user->state_id);
             return response()->json([
                 'result' => $user
             ]);
